@@ -1,9 +1,11 @@
-import express from "express"
+import express from "express";
+import clientes from "./clientesRoutes.js";
+
 
 const routes = (app) => {
-    app.route("/").get((req, res) => res.status(200).send("PetShop Home"))
+    app.route("/").get((req, res) => res.status(200).send("PetShop Home"));
 
-    app.use(express.json())
+    app.use(express.json(), clientes);
 }
 
 export default routes;
