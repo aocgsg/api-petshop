@@ -3,7 +3,7 @@ import ClienteController from "../controllers/clienteController.js";
 
 const routes = express.Router();
 
-routes.get("/clientes", ClienteController.listarCliente);;
+routes.get("/clientes", ClienteController.listarCliente);
 routes.post("/clientes", ClienteController.cadastrarCliente);
 
 export default routes;
